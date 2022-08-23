@@ -32,7 +32,7 @@ export const updateLikes = async (
     inc: number = 1): Promise<Photo> => {
   const res = await photosCollections.findOneAndUpdate(
     {_id: new ObjectId(id)},
-    { $inc: { Likes:inc }}
+    { $inc: { Likes: inc }}
   )
   const updatedPhoto = res.value as Photo;
 //   updatedPhoto.likes = inc 
